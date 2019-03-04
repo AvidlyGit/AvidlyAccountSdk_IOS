@@ -32,7 +32,7 @@ AdSupport.framework
 </dict>
 ```
 3.在info.plist中加入以下节点，以便使用Facebook的登陆和对话框
-**需要在Facebook的后台注册应用信息后复制粘贴，以下参数仅供参考
+*需要在Facebook的后台注册应用信息后复制粘贴，以下参数仅供参考*
 ```
 <key>CFBundleURLTypes</key>
 <array>
