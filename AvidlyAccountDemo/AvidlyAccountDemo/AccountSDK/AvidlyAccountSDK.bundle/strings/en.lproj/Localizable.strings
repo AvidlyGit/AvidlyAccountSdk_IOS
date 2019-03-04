@@ -1,0 +1,98 @@
+/* 
+  STAvidlyScore.strings
+  Score
+
+  Created by steve on 2017/2/20.
+  Copyright © 2017年 liuguojun. All rights reserved.
+*/
+
+"账户" = "Account";
+"游客登录" = "Quick Login";
+"Avid.ly账户登录" = "Avid.ly Account Login";
+"第三方登录" = "Other Login";
+"用户名" = "User Name";
+"登录中" = "Logging in...";
+"切换账户" = "Switch Account";
+"用户登录" = "Login";
+"用户注册" = "Register";
+"邮箱" = "Email";
+"密码（6-16位)" = "Password(6~16 Characters)";
+"登录" = "Login";
+"忘记密码？" = "Forget Password?";
+"同意Avid.ly用户服务协议" = "Accept Avid.ly Service Policy";
+"注册" = "Register";
+"新用户绑定" = "Account Bind";
+"注册并绑定" = "Register & Bind";
+"用户中心" = "User Center";
+"游客" = "Guest";
+"绑定Avid.ly账户" = "Bind Avid.ly Account";
+"绑定第三方账户" = "Bind Other Account";
+"请尽快绑定账户，以免游戏数据丢失" = "Please bind account to avoid account loss.";
+"去绑定" = "Bind";
+"解绑" = "Unbind";
+"修改密码" = "Change Password";
+"当前密码" = "Current Password";
+"新密码（6-16位)" = "New Password (6~16 Characters)";
+"再次输入新密码" = "Enter new password again";
+"确定修改" = "Confirm";
+"找回密码" = "Password Retrieve";
+"请输入你的注册邮箱，系统会发送一个随机新密码到你的邮箱" = "Please enter your registered email, New password will be sent to your email box.";
+"发送" = "Send";
+
+"密码必需是在6~16位之间且不包含非法字符" = "Password must between 6-16 characters and does not contain any illegal characters.";
+"输入邮箱格式错误" = "Wrong Email Format";
+"请输入Avid.ly账号" = "Please enter Avid.ly account.";
+"请输入密码" = "Please enter Password.";
+"密码错误" = "Wrong Password";
+"该用户名已存在" = "Account name is already exist";
+"请同意服务条款" = "Please accept Avid.ly Service Policy.";
+"账号或密码不正确" = "Wrong account name or password";
+"绑定成功" = "Account Bound";
+"两次密码填写不一致" = "Two new passwords do not match";
+"当前密码错误，修改密码失败。" = "Wrong Current Passwore, failed to change password.";
+"修改密码成功" = "Password changed successfully";
+"请填写当前密码和新密码" = "Please enter current Password and New Password first.";
+"你是否要解除账号的绑定？" = "Are you sure to unbind your account?";
+
+"登录成功" = "Login success";
+"登录失败" = "Login failed";
+"注册成功" = "Registration success";
+"注册失败" = "Registration failed";
+
+"需要先绑定Avid.ly账号后才能修改密码" = "You need to bind Avid.ly account first to modify password.";
+"请输入原密码" = "Please enter current password.";
+"请输入新密码" = "Please enter new password.";
+"请再次输入新密码" = "Please enter new password again,";
+"新密码不能和原密码相同" = "New password and current password cannot be the same.";
+"密码设置成功" = "Password modified success";
+"密码设置失败" = "Password modified failed";
+"密码设置失败，原密码不正确!" = "Wrong Current Passwore, failed to modify password.";
+
+"请输入账号邮箱地址" = "Please enter account email address.";
+"邮箱格式不对" = "Wrong email format.";
+"请求发送成功" = "Request sent";
+"请求发送失败" = "Request failed";
+
+"绑定成功" = "Account bound";
+"绑定失败" = "Account bound failed";
+
+"解绑成功" = "Account unbound";
+"解绑失败" = "Account unbound failed";
+"需要先绑定Avid.ly账号后才能解绑" = "You need to bind Avid.ly account first to unbind";
+"解绑失败，当前帐号尚未绑定到%1$s!" = "Account unbound failed, your current account has not bound to %1$s!.";
+
+"当前%1$s帐号已被其它帐号绑定!" = "%1$s has been bound to another account.";
+"登录失败，请稍后重试" = "Login failed, please try again later.";
+"用户名不存在" = "User name not exist";
+"登录失败，密码不对!" = "Login failed, wrong password.";
+"用户名已存在" = "User name is already exist";
+
+"facebook取消登录" = "Facebook login cancelled";
+"facebook登录失败" = "Facebook login failed";
+
+"无法解绑当前登录账号" = "You cannt unbind the current login account.";
+"已经绑定过账号" = "Account bound already.";
+
+"https://d5q0hty07mfa4.cloudfront.net/privacy_policy/pp_cn.html" = "https://d5q0hty07mfa4.cloudfront.net/privacy_policy/pp_en.html";
+"敬请期待" = "Coming Soon";
+"您之前已经绑定过avidly账号" = "You have bound Avid.ly account before";
