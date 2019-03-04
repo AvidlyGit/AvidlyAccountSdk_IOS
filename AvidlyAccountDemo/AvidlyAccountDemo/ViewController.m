@@ -54,13 +54,13 @@
         });
     }];
     
-    [AvidlyAccountSDK setUserChangeCallback:^(NSString * _Nonnull gameGuestId) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",gameGuestId] forState:UIControlStateNormal];
-            self->_userInfoButton.hidden = NO;
-        });
-        NSLog(@"AvidlyAccountSDK userChange gameGuestId:%@",gameGuestId);
-    }];
+//    [AvidlyAccountSDK setUserChangeCallback:^(NSString * _Nonnull gameGuestId) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",gameGuestId] forState:UIControlStateNormal];
+//            self->_userInfoButton.hidden = NO;
+//        });
+//        NSLog(@"AvidlyAccountSDK userChange gameGuestId:%@",gameGuestId);
+//    }];
 }
 
 -(void)userInfo {
