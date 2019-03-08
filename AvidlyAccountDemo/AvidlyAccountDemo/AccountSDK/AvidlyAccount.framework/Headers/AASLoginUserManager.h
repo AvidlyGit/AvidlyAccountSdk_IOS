@@ -20,6 +20,8 @@
  */
 - (NSString*)getCurrentGGID;
 
+- (NSString*)getCurrentToken;
+
 /**
  * 检查当前是否已经登陆
  *
@@ -42,6 +44,8 @@
  */
 - (AASLoginUser*)onGuestLoginSuccess:(NSString*)ggid;
 
+- (AASLoginUser*)onGuestLoginSuccess:(NSString*)ggid token:(NSString*)token;
+
 /**
  * 帐号用户登陆成功后调用此方法，记得调用saveAccountUsers()保存用户数据
  *
@@ -50,6 +54,8 @@
  * @return 返回LoginUser，用于更新更多其它的数据
  */
 - (AASLoginUser*)onAccountLoginSuccess:(AASAccountModeType)mode ggid:(NSString*)ggid;
+
+- (AASLoginUser*)onAccountLoginSuccess:(AASAccountModeType)mode ggid:(NSString*)ggid token:(NSString*) token;
 
 /**
  * 第三方帐号解绑

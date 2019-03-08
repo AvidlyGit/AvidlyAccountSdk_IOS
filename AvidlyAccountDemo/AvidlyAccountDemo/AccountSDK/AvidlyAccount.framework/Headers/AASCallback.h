@@ -16,6 +16,5 @@ typedef void (^CallbackBlock)(id obj);
 
 @property (nonatomic,copy) CallbackBlock loginSucceedBlock;
 @property (nonatomic,copy) CallbackBlock loginErrorBlock;
-@property (nonatomic,copy) CallbackBlock userChangeBlock;
 
 @end

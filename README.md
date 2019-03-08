@@ -22,7 +22,9 @@ AdSupport.framework
 
 ## 1.3 工程配置
 1. 添加分类编译符
+
 在 *TARGETS → Build Setting → Linking → Other Linker Flags* 中加入 *** -ObjC ***
+
 2. 在info.plist中加入以下节点，以兼容http模式
 ```
 <key>NSAppTransportSecurity</key>
@@ -32,7 +34,9 @@ AdSupport.framework
 </dict>
 ```
 3.在info.plist中加入以下节点，以便使用Facebook的登陆和对话框
+
 *需要在Facebook的后台注册应用信息后复制粘贴，以下参数仅供参考*
+
 ```
 <key>CFBundleURLTypes</key>
 <array>
@@ -62,7 +66,7 @@ FB的对话框：
 ```
 
 # 二、SDK接入
-## 1、初始化SDK
+## 1、设置SDK
 1. 在AppDelegate.m添加如下引用
 ```
 #import <AvidlyAccountSDK.h>
@@ -89,31 +93,56 @@ return YES;
 ```
 
 ## 2、用户登录
-1. 用户登录API
+1. 初始化SDK
+
+### 初始化SDK共分为三步，请依次进行：
+
+第一步 初始化SDK
 ```
 /**
 * @ param productId：产品ID
 **/
-- (void)loginWithProductId:(NSString *)productId
-succeedBlock:(void (^)(NSString *gameGuestId))succeedBlock
-errorBlock:(void (^)(NSError *error))errorBlock;
++ (void)initSDK:(NSString *)productId
 ```
 
-*Product ID需要找项目经理获取*
 ### 示例代码：
 ```
-[AvidlyAccountSDK loginWithProductId:@"123456" succeedBlock:^(NSString * _Nonnull gameGuestId) {
+/* 
+初始化AccountSDK
+@param productId 产品ID，需要找项目经理获取
+*/
+[AvidlyAccountSDK initSDK:@"123456"];
+```
+第二步 获取登陆回调
+```
+/*
+@param model 登录类型
+model.gameGuestId 获取gameGuestId
+model.signedRequest 获取token
+*/
++ (void)setLoginCallback:(void (^)(AvidlyAccountLoginModel *model))succeedCallback errorCallback:(void (^)(NSError *error))errorCallback;
+```
+
+### 示例代码：
+```
+[AvidlyAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
 dispatch_async(dispatch_get_main_queue(), ^{
-[self->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",gameGuestId] forState:UIControlStateNormal];
-self->_userInfoButton.hidden = NO;
+[self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.signedRequest] forState:UIControlStateNormal];
 });
-NSLog(@"AvidlyAccountSDK login gameGuestId:%@",gameGuestId);
-} errorBlock:^(NSError * _Nonnull error) {
+} errorCallback:^(NSError * _Nonnull error) {
 dispatch_async(dispatch_get_main_queue(), ^{
-[self->_loginButton setTitle:[NSString stringWithFormat:@"error:%i",(int)error.code] forState:UIControlStateNormal];
+[self ->_loginButton setTitle:[NSString stringWithFormat:@"error:%i",(int)error.code] forState:UIControlStateNormal];
 });
-NSLog(@"AvidlyAccountSDK login error:%@",error);
 }];
+```
+第三步 用户登陆
+```
++ (void)login;
+```
+
+### 示例代码：
+```
+[AvidlyAccountSDK login];
 ```
 
 2. 用户切换账号

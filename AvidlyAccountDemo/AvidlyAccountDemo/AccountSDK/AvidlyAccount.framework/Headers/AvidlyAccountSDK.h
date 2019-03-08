@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "AASEnumDefine.h"
+#import "AvidlyAccountLoginModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,11 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 
-+ (void)setUserChangeCallback:(void (^)(NSString *gameGuestId))callback;
++ (void)initSDK:(NSString *)productId;
 
-+ (void)loginWithProductId:(NSString *)productId
-              succeedBlock:(void (^)(NSString *gameGuestId))succeedBlock
-                errorBlock:(void (^)(NSError *error))errorBlock;
++ (void)setLoginCallback:(void (^)(AvidlyAccountLoginModel *model))succeedCallback errorCallback:(void (^)(NSError *error))errorCallback;
+
++ (void)login;
 
 + (void)showUserCenter:(UIViewController *)vc;
 

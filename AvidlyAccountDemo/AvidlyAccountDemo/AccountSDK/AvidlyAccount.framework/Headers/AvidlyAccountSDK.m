@@ -28,29 +28,41 @@
                                                                annotation:annotation];
 }
 
-+ (void)setUserChangeCallback:(void (^)(NSString *gameGuestId))callback {
-    [AASCallback shareInstance].userChangeBlock = [callback copy];
-}
-
-+ (void)loginWithProductId:(NSString *)productId
-              succeedBlock:(void (^)(NSString *gameGuestId))succeedBlock
-                errorBlock:(void (^)(NSError *error))errorBlock {
++ (void)initSDK:(NSString *)productId {
     if (productId == nil || [productId isEqualToString:@""]) {
         NSLog(@"[AvidlyAccountSDK Error] productId is nil, SDK not initialized successfully. Please check!");
+        return ;
     }
     [AASBaseParameter shareInstance].productId = [productId copy];
-    [AASCallback shareInstance].loginSucceedBlock = [succeedBlock copy];
-    [AASCallback shareInstance].loginErrorBlock = [errorBlock copy];
-    
+}
+
++ (void)setLoginCallback:(void (^)(AvidlyAccountLoginModel *model))succeedCallback errorCallback:(void (^)(NSError *error))errorCallback {
+    [AASCallback shareInstance].loginSucceedBlock = [succeedCallback copy];
+    [AASCallback shareInstance].loginErrorBlock = [errorCallback copy];
+}
+
++ (void)login {
+    NSString *productId = [AASBaseParameter shareInstance].productId;
+    if (productId == nil || [productId isEqualToString:@""]) {
+        NSLog(@"[AvidlyAccountSDK Error] productId is nil, SDK not initialized successfully. Please check!");
+        return;
+    }
+
     [[AASLoginUserManager shareInstance] freshUserCache];
-    
     BOOL isLoginedNow = [[AASLoginUserManager shareInstance] isLoginedNow];
     if (isLoginedNow) {
         NSString *gameGuestId = [[AASLoginUserManager shareInstance] getCurrentGGID];
-        if (gameGuestId != nil && ![gameGuestId isEqualToString:@""]) {
-            succeedBlock(gameGuestId);
-            return;
-        }
+        NSString *token = [[AASLoginUserManager shareInstance] getCurrentToken];
+        int loginMode = [[AASLoginUserManager shareInstance] getCurrentActiveLoginUser].loginedMode;
+        
+        AvidlyAccountLoginModel *model = [[AvidlyAccountLoginModel alloc] init];
+        model.gameGuestId = gameGuestId;
+        model.signedRequest = token;
+        model.loginMode = loginMode;
+        
+        CallbackBlock succeedBlock = [AASCallback shareInstance].loginSucceedBlock;
+        succeedBlock(model);
+        return;
     }
     
     AASLoginUser *loginUser = [[AASLoginUserManager shareInstance] getCurrentActiveLoginUser];

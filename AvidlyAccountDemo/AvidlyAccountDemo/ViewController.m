@@ -43,24 +43,31 @@
 }
 
 -(void)login {
-    [AvidlyAccountSDK loginWithProductId:@"610322" succeedBlock:^(NSString * _Nonnull gameGuestId) {
+    /* 第一步 初始化AccountSDK
+     @param productId 产品ID，需要找项目经理获取
+     */
+    [AvidlyAccountSDK initSDK:@"123456"];
+    
+    /*
+     第二步 获取登陆回调
+     @param model 登录类型
+        model.gameGuestId 获取gameGuestId
+        model.signedRequest 获取token
+    */
+    [AvidlyAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",gameGuestId] forState:UIControlStateNormal];
+            [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.signedRequest] forState:UIControlStateNormal];
         });
-        NSLog(@"GameGuestID:%@",gameGuestId);
-    } errorBlock:^(NSError * _Nonnull error) {
+    } errorCallback:^(NSError * _Nonnull error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self ->_loginButton setTitle:[NSString stringWithFormat:@"error:%i",(int)error.code] forState:UIControlStateNormal];
         });
     }];
     
-//    [AvidlyAccountSDK setUserChangeCallback:^(NSString * _Nonnull gameGuestId) {
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",gameGuestId] forState:UIControlStateNormal];
-//            self->_userInfoButton.hidden = NO;
-//        });
-//        NSLog(@"AvidlyAccountSDK userChange gameGuestId:%@",gameGuestId);
-//    }];
+    // 第三步 用户登陆
+    [AvidlyAccountSDK login];
+    
+
 }
 
 -(void)userInfo {
