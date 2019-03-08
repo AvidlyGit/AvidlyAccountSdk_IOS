@@ -3,7 +3,7 @@
 
 # 一、工程接入
 ## 1.1 获取SDK包 
-1.首先从github（https://github.com/AvidlyGit/AvidlyAccountSdk_IOS）上获取工程，在目录：AvidlyAccountSdk_IOS/AvidlyAccountDemo/AvidlyAccountDemo/中找到AccountSDK和FacebookSDK 
+1.首先从github（https://github.com/AvidlyGit/AvidlyAccountSdk_IOS）上获取工程，在目录(AvidlyAccountSdk_IOS/AvidlyAccountDemo/AvidlyAccountDemo/)中找到AccountSDK和FacebookSDK 
 AccountSDK目录包含如下文件：
 * AvidlyAccount.framework
 * AvidlyAccount.bundle
@@ -64,6 +64,10 @@ FB的对话框：
 <string>fbshareextension</string>
 </array>
 ```
+
+4. 在Xcode的PROJECT -> Info -> Localizations中点击"+"，添加多语言
+
+目前支持简体中文、繁体中文和英文三种语言
 
 # 二、SDK接入
 ## 1、设置SDK
