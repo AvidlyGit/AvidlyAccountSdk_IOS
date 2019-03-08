@@ -3,7 +3,8 @@
 
 # 一、工程接入
 ## 1.1 获取SDK包 
-1.首先从github（https://github.com/AvidlyGit/AvidlyAccountSdk_IOS）上获取工程，在目录(AvidlyAccountSdk_IOS/AvidlyAccountDemo/AvidlyAccountDemo/)中找到AccountSDK和FacebookSDK 
+1.首先从github:(https://github.com/AvidlyGit/AvidlyAccountSdk_IOS）
+上获取工程，在目录:(AvidlyAccountSdk_IOS/AvidlyAccountDemo/AvidlyAccountDemo/)中找到AccountSDK和FacebookSDK 
 AccountSDK目录包含如下文件：
 * AvidlyAccount.framework
 * AvidlyAccount.bundle
