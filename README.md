@@ -19,9 +19,13 @@ FacebookSDK目录包含如下文件：
 1. 添加ACcountSDK和Facebook的SDK
 
 请将AvidlyAccount.framework与AvidlyAccountSDK.bundle两个文件同时添加到你的Xcode工程目录下；
+
 如果需要Facebook登录，请将下载下来的Facebook SDK添加到Xcode工程目录下。
+
 2. 添加第三方依赖库
+
 在 *TARGETS → General → Link Binary With Libraries* 中添加依赖库:
+
 AdSupport.framework
 
 ## 1.3 工程配置
