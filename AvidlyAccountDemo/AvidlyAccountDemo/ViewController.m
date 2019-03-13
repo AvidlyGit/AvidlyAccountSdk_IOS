@@ -46,7 +46,7 @@
     /* 第一步 初始化AccountSDK
      @param productId 产品ID，需要找项目经理获取
      */
-    [AvidlyAccountSDK initSDK:@"123456"];
+    [AvidlyAccountSDK initSDK:@"610322"];
     
     /*
      第二步 获取登陆回调
@@ -56,7 +56,7 @@
     */
     [AvidlyAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.signedRequest] forState:UIControlStateNormal];
+            [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.gameGuestId] forState:UIControlStateNormal];
         });
     } errorCallback:^(NSError * _Nonnull error) {
         dispatch_async(dispatch_get_main_queue(), ^{
