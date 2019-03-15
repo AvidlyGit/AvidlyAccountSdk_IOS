@@ -46,7 +46,7 @@
     /* 第一步 初始化AccountSDK
      @param productId 产品ID，需要找项目经理获取
      */
-    [AvidlyAccountSDK initSDK:@"610322"];
+    [AvidlyAccountSDK initSDK:@"1000152"];
     
     /*
      第二步 获取登陆回调
