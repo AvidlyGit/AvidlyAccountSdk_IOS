@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)login;
 
++ (NSString *)getFacebookLoginedToken;
+
 + (void)showUserCenter:(UIViewController *)vc;
 
 @end

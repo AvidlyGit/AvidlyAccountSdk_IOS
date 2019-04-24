@@ -16,9 +16,9 @@
 		BD2669F6222D176A00620557 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F0222D176A00620557 /* FBSDKLoginKit.framework */; };
 		BD2669F7222D176A00620557 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F1222D176A00620557 /* FBSDKCoreKit.framework */; };
 		BD2669F8222D176A00620557 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F2222D176A00620557 /* Bolts.framework */; };
-		BD2669F9222D176A00620557 /* AvidlyAccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F4222D176A00620557 /* AvidlyAccount.framework */; };
 		BD2669FA222D176A00620557 /* AvidlyAccountSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD2669F5222D176A00620557 /* AvidlyAccountSDK.bundle */; };
 		BD2669FD222D179900620557 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669FC222D179900620557 /* AdSupport.framework */; };
+		BD394A7A22703AB800826662 /* AvidlyAccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394A7922703AB800826662 /* AvidlyAccount.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +46,13 @@
 		BD2669F0222D176A00620557 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BD2669F1222D176A00620557 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BD2669F2222D176A00620557 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		BD2669F4222D176A00620557 /* AvidlyAccount.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AvidlyAccount.framework; sourceTree = "<group>"; };
 		BD2669F5222D176A00620557 /* AvidlyAccountSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AvidlyAccountSDK.bundle; sourceTree = "<group>"; };
 		BD2669FC222D179900620557 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BD266A5622326E8200620557 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		BD266A5722326E8300620557 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BD266A5822326EDE00620557 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		BD266A5922326EDE00620557 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BD394A7922703AB800826662 /* AvidlyAccount.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AvidlyAccount.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 			files = (
 				BD2669FD222D179900620557 /* AdSupport.framework in Frameworks */,
 				BD2669F8222D176A00620557 /* Bolts.framework in Frameworks */,
-				BD2669F9222D176A00620557 /* AvidlyAccount.framework in Frameworks */,
 				BD2669F6222D176A00620557 /* FBSDKLoginKit.framework in Frameworks */,
+				BD394A7A22703AB800826662 /* AvidlyAccount.framework in Frameworks */,
 				BD2669F7222D176A00620557 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +128,7 @@
 		BD2669F3222D176A00620557 /* AccountSDK */ = {
 			isa = PBXGroup;
 			children = (
-				BD2669F4222D176A00620557 /* AvidlyAccount.framework */,
+				BD394A7922703AB800826662 /* AvidlyAccount.framework */,
 				BD2669F5222D176A00620557 /* AvidlyAccountSDK.bundle */,
 			);
 			name = AccountSDK;
