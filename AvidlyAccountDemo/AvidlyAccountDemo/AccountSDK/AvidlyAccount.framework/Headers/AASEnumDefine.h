@@ -33,6 +33,9 @@
 #define ALOGIN_USER_ACTIVED @"actived"
 #define ALOGIN_USER_ACCOUNTS @"accounts"
 
+#define ALOGIN_USER_ISVERIFIEDEMAIL @"isVerifiedEmail"
+#define ALOGIN_USER_VERIFIEDEMAIL @"verifyEmail"
+
 #define USERDEFAULT_KEY_GUEST_USER  @"guest_user"
 #define USERDEFAULT_KEY_ACCOUNT_USER  @"account_user"
 

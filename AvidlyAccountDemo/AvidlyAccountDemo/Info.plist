@@ -21,16 +21,16 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1878201782477856</string>
+				<string>fb2079037042150041</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>3</string>
 	<key>FacebookAppID</key>
-	<string>1878201782477856</string>
+	<string>2079037042150041</string>
 	<key>FacebookDisplayName</key>
-	<string>DoubleWin Slots</string>
+	<string>最强三国</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

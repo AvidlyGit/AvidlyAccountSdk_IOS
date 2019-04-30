@@ -157,22 +157,7 @@ dispatch_async(dispatch_get_main_queue(), ^{
 [AvidlyAccountSDK login];
 ```
 
-2. 用户切换账号
-```
-- (void)setUserChangeCallback:(void (^)(NSString *gameGuestId))callback;
-```
-### 示例代码
-```
-[AvidlyAccountSDK setUserChangeCallback:^(NSString * _Nonnull gameGuestId) {
-dispatch_async(dispatch_get_main_queue(), ^{
-[self->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",gameGuestId] forState:UIControlStateNormal];
-self->_userInfoButton.hidden = NO;
-});
-NSLog(@"AvidlyAccountSDK userChange gameGuestId:%@",gameGuestId);
-}];
-```
-
-3. 进入用户中心
+2. 进入用户中心
 ```
 -(void)showUserCenter:(UIViewController *)vc;
 ```
@@ -180,4 +165,11 @@ NSLog(@"AvidlyAccountSDK userChange gameGuestId:%@",gameGuestId);
 ```
 [AvidlyAccountSDK showUserCenter:self];
 ```
-
+3. 获取Facebook的token值
+```
++ (NSString *)getFacebookLoginedToken;
+```
+### 示例代码
+```
+NSString *string = [AvidlyAccountSDK getFacebookLoginedToken];
+```

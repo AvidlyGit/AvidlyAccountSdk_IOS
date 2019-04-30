@@ -12,6 +12,8 @@
 @interface ViewController () {
     UIButton *_loginButton;
     UIButton *_userInfoButton;
+    UIButton *_getFBTokenButton;
+    UIButton *_ChangeLoginButton;
 }
 
 @end
@@ -34,6 +36,42 @@
     [_userInfoButton setTitle:@"用户中心" forState:UIControlStateNormal];
     [_userInfoButton addTarget:self action:@selector(userInfo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_userInfoButton];
+    
+    _getFBTokenButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _getFBTokenButton.backgroundColor = [UIColor orangeColor];
+    _getFBTokenButton.frame = CGRectMake(60, 240, 255, 40);
+    [_getFBTokenButton setTitle:@"获取FBToken" forState:UIControlStateNormal];
+    [_getFBTokenButton addTarget:self action:@selector(getFBToken) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_getFBTokenButton];
+    
+    _ChangeLoginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _ChangeLoginButton.backgroundColor = [UIColor orangeColor];
+    _ChangeLoginButton.frame = CGRectMake(60, 310, 255, 40);
+    [_ChangeLoginButton setTitle:@"二次登录" forState:UIControlStateNormal];
+    [_ChangeLoginButton addTarget:self action:@selector(changeLogin) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_ChangeLoginButton];
+    
+    /* 第一步 初始化AccountSDK
+     @param productId 产品ID，需要找项目经理获取
+     */
+    [AvidlyAccountSDK initSDK:@"600151"];
+    
+    /*
+     第二步 获取登陆回调
+     @param model 登录类型
+     model.gameGuestId 获取gameGuestId
+     model.signedRequest 获取token
+     */
+    [AvidlyAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.gameGuestId] forState:UIControlStateNormal];
+            NSLog(@"signedRequest is :%@",model.signedRequest);
+        });
+    } errorCallback:^(NSError * _Nonnull error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self ->_loginButton setTitle:[NSString stringWithFormat:@"error:%i",(int)error.code] forState:UIControlStateNormal];
+        });
+    }];
 }
 
 - (void)adjustCenterH:(UIView*)v{
@@ -43,26 +81,7 @@
 }
 
 -(void)login {
-    /* 第一步 初始化AccountSDK
-     @param productId 产品ID，需要找项目经理获取
-     */
-    [AvidlyAccountSDK initSDK:@"1000152"];
     
-    /*
-     第二步 获取登陆回调
-     @param model 登录类型
-        model.gameGuestId 获取gameGuestId
-        model.signedRequest 获取token
-    */
-    [AvidlyAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.gameGuestId] forState:UIControlStateNormal];
-        });
-    } errorCallback:^(NSError * _Nonnull error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self ->_loginButton setTitle:[NSString stringWithFormat:@"error:%i",(int)error.code] forState:UIControlStateNormal];
-        });
-    }];
     
     // 第三步 用户登陆
     [AvidlyAccountSDK login];
@@ -71,7 +90,17 @@
 }
 
 -(void)userInfo {
+    // 用户中心
     [AvidlyAccountSDK showUserCenter:self];
+}
+
+-(void)getFBToken {
+    NSString *string = [AvidlyAccountSDK getFacebookLoginedToken];
+    NSLog(@"FB token is %@",string);
+}
+
+-(void) changeLogin {
+    [AvidlyAccountSDK login];
 }
 
 @end

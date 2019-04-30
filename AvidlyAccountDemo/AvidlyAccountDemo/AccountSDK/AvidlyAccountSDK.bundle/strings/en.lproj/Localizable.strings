@@ -39,7 +39,8 @@
 "请输入你的注册邮箱，系统会发送一个随机新密码到你的邮箱" = "Please enter your registered email, New password will be sent to your email box.";
 "发送" = "Send";
 
-"密码必需是在6~16位之间且不包含非法字符" = "Password must between 6-16 characters and does not contain any illegal characters.";
+"密码必需是在6~16位之间" = "Password must between 6-16 characters.";
+"密码不能包含非法字符" = "Password does not contain any illegal characters.";
 "输入邮箱格式错误" = "Wrong Email Format";
 "请输入Avid.ly账号" = "Please enter Avid.ly account.";
 "请输入密码" = "Please enter Password.";
@@ -49,7 +50,7 @@
 "账号或密码不正确" = "Wrong account name or password";
 "绑定成功" = "Account Bound";
 "两次密码填写不一致" = "Two new passwords do not match";
-"当前密码错误，修改密码失败。" = "Wrong Current Passwore, failed to change password.";
+"当前密码错误，修改密码失败。" = "Wrong Current Password, failed to change password.";
 "修改密码成功" = "Password changed successfully";
 "请填写当前密码和新密码" = "Please enter current Password and New Password first.";
 "你是否要解除账号的绑定？" = "Are you sure to unbind your account?";
@@ -63,10 +64,10 @@
 "请输入原密码" = "Please enter current password.";
 "请输入新密码" = "Please enter new password.";
 "请再次输入新密码" = "Please enter new password again,";
-"新密码不能和原密码相同" = "New password and current password cannot be the same.";
+"新密码不能和原密码相同" = "password cannot be the same.";
 "密码设置成功" = "Password modified success";
 "密码设置失败" = "Password modified failed";
-"密码设置失败，原密码不正确!" = "Wrong Current Passwore, failed to modify password.";
+"密码设置失败，原密码不正确!" = "Wrong Current Password, failed to modify password.";
 
 "请输入账号邮箱地址" = "Please enter account email address.";
 "邮箱格式不对" = "Wrong email format.";
@@ -96,3 +97,38 @@
 "https://d5q0hty07mfa4.cloudfront.net/privacy_policy/pp_cn.html" = "https://d5q0hty07mfa4.cloudfront.net/privacy_policy/pp_en.html";
 "敬请期待" = "Coming Soon";
 "您之前已经绑定过avidly账号" = "You have bound Avid.ly account before";
+"邮箱长度不得超过80字符" = "Email should not more than 80 Characters";
+
+"没有权限" = "Permission denied";
+"验证码错误" = "Verification code error";
+"验证码过期" = "Verification code expired" ;
+"账号不存在" = "Account doesn't exist" ;
+"账号已被锁定" = "Account hasbeen locked" ;
+"用户名/密码错误" = "Username or password is wrong" ;
+"认证失败" = "Authentication is failed" ;
+"过期的证书" = "Expired certificate" ;
+"登录失败次数过多" = "Too many loginfailures" ;
+"系统异常" = "System exception" ;
+"验证错误" = "Validation error" ;
+"签名验证错误" = "Signature verification error" ;
+"绑定Faceboo_token参数为空" = "Facebook token is empty" ;
+"游客ID不存在" = "Ggid doesnot exist" ;
+"游客ID已被绑定" = "Account has been bound" ;
+"解绑Facebook_token有误" = "Incorrect token" ;
+"access_token信息错误" = "token is error" ;
+"当前Facebook帐号已被其它帐号绑定" = "Facebook'account has been bound to another account" ;
+"当前游客帐号已被其它Facebook帐号绑定" = "Guest'account has been bound to another Facebook'account" ;
+"当前游客账号未绑定avid用户" = "Guest'account has been bound to avidly'account" ;
+"参数不能为空" = "Platform is null" ;
+"pdtid是非法的" = " Pdtid is illicit" ;
+"当前token没有绑定游客ID" = "account has been bound to guest'account" ;
+"username未在数据库中发现" = "Please registered a account" ;
+"密码为空" = "Password is blank" ;
+"请输入正确的密码" = "Please enter the correct password" ;
+"两次密码不一致" = "Two new passwords do not match" ;
+"密码错误" = "Wrong password" ;
+"网络请求失败，请稍后再试" = "The network request failed. Please try again later";
+
+"认证邮箱" = "Validation Email" ;
+"联系我们" = "Contact Us" ;
+"游戏FAQ" = "Game FAQ" ;
