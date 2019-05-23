@@ -6,4 +6,4 @@
 //  Copyright © 2019 Avidly Technology Co.,Ltd. All rights reserved.
 //
 
-#define AvidlyAccountSDK_Version @"1001"
+#define AvidlyAccountSDK_Version @"1002"
