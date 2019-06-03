@@ -125,7 +125,18 @@ return YES;
 */
 [AvidlyAccountSDK initSDK:@"123456"];
 ```
-第二步 获取登陆回调
+
+第二步 用户登陆
+```
++ (void)login;
+```
+
+### 示例代码：
+```
+[AvidlyAccountSDK login];
+```
+
+第三步 获取登陆回调
 ```
 /*
 @param model 登录类型
@@ -146,15 +157,6 @@ dispatch_async(dispatch_get_main_queue(), ^{
 [self ->_loginButton setTitle:[NSString stringWithFormat:@"error:%i",(int)error.code] forState:UIControlStateNormal];
 });
 }];
-```
-第三步 用户登陆
-```
-+ (void)login;
-```
-
-### 示例代码：
-```
-[AvidlyAccountSDK login];
 ```
 
 2. 进入用户中心
