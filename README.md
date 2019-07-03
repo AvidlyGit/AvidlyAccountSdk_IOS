@@ -143,12 +143,12 @@ return YES;
 model.gameGuestId 获取gameGuestId
 model.signedRequest 获取token
 */
-+ (void)setLoginCallback:(void (^)(AvidlyAccountLoginModel *model))succeedCallback errorCallback:(void (^)(NSError *error))errorCallback;
++ (void)setLoginCallback:(void (^)(AASAccountLoginModel *model))succeedCallback errorCallback:(void (^)(NSError *error))errorCallback;
 ```
 
 ### 示例代码：
 ```
-[AASAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
+[AASAccountSDK setLoginCallback:^(AASAccountLoginModel * _Nonnull model) {
 dispatch_async(dispatch_get_main_queue(), ^{
 [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.signedRequest] forState:UIControlStateNormal];
 });
