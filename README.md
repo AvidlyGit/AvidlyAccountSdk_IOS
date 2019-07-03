@@ -7,8 +7,8 @@
 上获取工程，在目录:(AvidlyAccountSdk_IOS/AvidlyAccountDemo/AvidlyAccountDemo/)中找到AccountSDK和FacebookSDK
 
 AccountSDK目录包含如下文件：
-* AvidlyAccount.framework
-* AvidlyAccount.bundle
+* AASAccount.framework
+* AASAccount.bundle
 
 FacebookSDK目录包含如下文件：
 * FBSDKLoginKit.framework
@@ -16,9 +16,9 @@ FacebookSDK目录包含如下文件：
 * Bolts.framework
 
 ## 1.2 Xcode工程添加SDK包
-1. 添加ACcountSDK和Facebook的SDK
+1. 添加AccountSDK和Facebook的SDK
 
-请将AvidlyAccount.framework与AvidlyAccountSDK.bundle两个文件同时添加到你的Xcode工程目录下；
+请将AASAccount.framework与AASAccountSDK.bundle两个文件同时添加到你的Xcode工程目录下；
 
 如果需要Facebook登录，请将下载下来的Facebook SDK添加到Xcode工程目录下。
 
@@ -87,7 +87,7 @@ FB的对话框：
 ```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-[AvidlyAccountSDK application:application didFinishLaunchingWithOptions:launchOptions];  
+[AASAccountSDK application:application didFinishLaunchingWithOptions:launchOptions];  
 return YES;
 }
 ```
@@ -96,7 +96,7 @@ return YES;
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
 options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
 
-[AvidlyAccountSDK application:application openURL:url
+[AASAccountSDK application:application openURL:url
 sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
 annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
 
@@ -123,7 +123,7 @@ return YES;
 初始化AccountSDK
 @param productId 产品ID，需要找项目经理获取
 */
-[AvidlyAccountSDK initSDK:@"123456"];
+[AASyAccountSDK initSDK:@"123456"];
 ```
 
 第二步 用户登陆
@@ -133,7 +133,7 @@ return YES;
 
 ### 示例代码：
 ```
-[AvidlyAccountSDK login];
+[AASAccountSDK login];
 ```
 
 第三步 获取登陆回调
@@ -148,7 +148,7 @@ model.signedRequest 获取token
 
 ### 示例代码：
 ```
-[AvidlyAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
+[AASAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
 dispatch_async(dispatch_get_main_queue(), ^{
 [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.signedRequest] forState:UIControlStateNormal];
 });
@@ -165,7 +165,7 @@ dispatch_async(dispatch_get_main_queue(), ^{
 ```
 ### 示例代码
 ```
-[AvidlyAccountSDK showUserCenter:self];
+[AASAccountSDK showUserCenter:self];
 ```
 3. 获取Facebook的token值
 ```
@@ -173,5 +173,5 @@ dispatch_async(dispatch_get_main_queue(), ^{
 ```
 ### 示例代码
 ```
-NSString *string = [AvidlyAccountSDK getFacebookLoginedToken];
+NSString *string = [AASAccountSDK getFacebookLoginedToken];
 ```
