@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <AvidlyAccount/AvidlyAccountSDK.h>
+#import <AASAccount/AASAccountSDK.h>
 @interface AppDelegate ()
 
 @end
@@ -18,13 +18,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [AvidlyAccountSDK application:application didFinishLaunchingWithOptions:launchOptions];
+    [AASAccountSDK application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 
 // 唤醒第三方app
 - (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    [AvidlyAccountSDK application:application openURL:url sourceApplication:options [UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options [UIApplicationOpenURLOptionsAnnotationKey]];
+    [AASAccountSDK application:application openURL:url sourceApplication:options [UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options [UIApplicationOpenURLOptionsAnnotationKey]];
     
     return YES;
 }

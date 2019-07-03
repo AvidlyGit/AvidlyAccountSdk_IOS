@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <AvidlyAccount/AvidlyAccountSDK.h>
+#import <AASAccount/AASAccountSDK.h>
 
 @interface ViewController () {
     UIButton *_loginButton;
@@ -28,7 +28,7 @@
     _pdtID.backgroundColor = [UIColor whiteColor];
     _pdtID.layer.borderWidth = 1.0f;
     _pdtID.layer.borderColor = [UIColor colorWithRed:0xbf/255.0f green:0xbf/255.0f blue:0xbf/255.0f alpha:1].CGColor;;
-    _pdtID.placeholder = @"请输入产品ID";
+    _pdtID.placeholder = @"请输入产品ID,默认1000152";
     _pdtID.frame = CGRectMake(60, 100, 250, 40);
     [self.view addSubview:_pdtID];
     
@@ -73,7 +73,7 @@
     /* 第一步 初始化AccountSDK
      @param productId 产品ID，需要找项目经理获取
      */
-    [AvidlyAccountSDK initSDK:_pdtID.text];
+    [AASAccountSDK initSDK:_pdtID.text];
     [self->_initButton setTitle:@"初始化成功" forState:UIControlStateNormal];
     self->_initButton.backgroundColor = [UIColor greenColor];
     self->_initButton.userInteractionEnabled = NO;
@@ -84,7 +84,7 @@
     
     
     // 第二步 用户登陆
-    [AvidlyAccountSDK login];
+    [AASAccountSDK login];
     
     /*
      第三步 获取登陆回调
@@ -92,7 +92,7 @@
      model.gameGuestId 获取gameGuestId
      model.signedRequest 获取token
      */
-    [AvidlyAccountSDK setLoginCallback:^(AvidlyAccountLoginModel * _Nonnull model) {
+    [AASAccountSDK setLoginCallback:^(AASAccountLoginModel * _Nonnull model) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.gameGuestId] forState:UIControlStateNormal];
             self->_loginButton.userInteractionEnabled = NO;
@@ -109,11 +109,11 @@
 
 -(void)userInfo {
     // 用户中心
-    [AvidlyAccountSDK showUserCenter:self];
+    [AASAccountSDK showUserCenter:self];
 }
 
 -(void)getFBToken {
-    NSString *string = [AvidlyAccountSDK getFacebookLoginedToken];
+    NSString *string = [AASAccountSDK getFacebookLoginedToken];
     NSLog(@"FB token is %@",string);
 }
 
