@@ -123,7 +123,7 @@ return YES;
 初始化AccountSDK
 @param productId 产品ID，需要找项目经理获取
 */
-[AASyAccountSDK initSDK:@"123456"];
+[AASAccountSDK initSDK:@"123456"];
 ```
 
 第二步 用户登陆
