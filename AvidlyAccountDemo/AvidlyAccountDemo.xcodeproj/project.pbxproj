@@ -17,8 +17,8 @@
 		BD2669F7222D176A00620557 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F1222D176A00620557 /* FBSDKCoreKit.framework */; };
 		BD2669F8222D176A00620557 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F2222D176A00620557 /* Bolts.framework */; };
 		BD2669FD222D179900620557 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669FC222D179900620557 /* AdSupport.framework */; };
-		BD7E737022A7BB8000595318 /* AASAccountSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD7E736E22A7BB8000595318 /* AASAccountSDK.bundle */; };
 		BDD455332321055000235272 /* AASAccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD455322321055000235272 /* AASAccount.framework */; };
+		BDF8860623506B8900A75A91 /* AASAccountSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BDF8860523506B8900A75A91 /* AASAccountSDK.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		BD266A5722326E8300620557 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BD266A5822326EDE00620557 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		BD266A5922326EDE00620557 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		BD7E736E22A7BB8000595318 /* AASAccountSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AASAccountSDK.bundle; sourceTree = "<group>"; };
 		BDD455322321055000235272 /* AASAccount.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AASAccount.framework; sourceTree = "<group>"; };
+		BDF8860523506B8900A75A91 /* AASAccountSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AASAccountSDK.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +128,8 @@
 		BD2669F3222D176A00620557 /* AccountSDK */ = {
 			isa = PBXGroup;
 			children = (
+				BDF8860523506B8900A75A91 /* AASAccountSDK.bundle */,
 				BDD455322321055000235272 /* AASAccount.framework */,
-				BD7E736E22A7BB8000595318 /* AASAccountSDK.bundle */,
 			);
 			name = AccountSDK;
 			path = AvidlyAccountDemo/AccountSDK;
@@ -225,7 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7E737022A7BB8000595318 /* AASAccountSDK.bundle in Resources */,
+				BDF8860623506B8900A75A91 /* AASAccountSDK.bundle in Resources */,
 				BD2669D8222D16CD00620557 /* LaunchScreen.storyboard in Resources */,
 				BD2669D5222D16CD00620557 /* Assets.xcassets in Resources */,
 				BD2669D3222D16CB00620557 /* Main.storyboard in Resources */,

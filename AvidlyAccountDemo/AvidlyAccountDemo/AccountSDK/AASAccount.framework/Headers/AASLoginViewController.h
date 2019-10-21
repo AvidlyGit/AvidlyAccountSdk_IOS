@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showSignupAndBindding;
 
+- (void)addData:(NSString *)text;
+
+/** 本地数据数组 */
+@property (nonatomic, strong) NSMutableArray *localArrM;
 @end
 
 NS_ASSUME_NONNULL_END
