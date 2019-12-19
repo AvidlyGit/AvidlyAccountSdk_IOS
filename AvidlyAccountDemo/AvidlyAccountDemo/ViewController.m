@@ -95,6 +95,8 @@
     [AASAccountSDK setLoginCallback:^(AASAccountLoginModel * _Nonnull model) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self ->_loginButton setTitle:[NSString stringWithFormat:@"ID:%@",model.gameGuestId] forState:UIControlStateNormal];
+            int loginModel = model.loginMode;
+            NSLog(@"loginModel is %d",loginModel);
             self->_loginButton.userInteractionEnabled = NO;
             NSLog(@"signedRequest is :%@",model.signedRequest);
         });

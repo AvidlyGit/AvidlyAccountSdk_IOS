@@ -6,6 +6,7 @@
   Copyright © 2017年 liuguojun. All rights reserved.
 */
 
+"正在登录..." = "logining...";
 "账户" = "Account";
 "游客登录" = "Quick Login";
 "Account账户登录" = "Account Login";
@@ -58,7 +59,7 @@
 
 "登录成功" = "Login success";
 "登录失败" = "Login failed";
-"注册成功" = "Registration success";
+"注册并绑定成功" = "Registration and binded success";
 "注册失败" = "Registration failed";
 
 "需要先绑定Account账号后才能修改密码" = "You need to bind account first to modify password.";
@@ -166,3 +167,13 @@
 "登录邮箱和认证邮箱一致" = "Login email is same as verified email";
 "邮件已发送至" = "The email has been sent to ";
 "请输入您的注册邮箱，系统会发送一封邮件指导您修改密码" = "Please enter your registered email, an eamil will guide you to change password.";
+
+"Gamecenter已绑定其他账号" = "Gamecenter has bound other accounts";
+"Gamecenter认证失败" =  "Gamecenter authentication failed";
+"Gamecenter playerID为空" = "Gamecenter playerID is null";
+"Gamecenter参数为空" = "Gamecenter parameter is null";
+"Gamecenter昵称为空" = "Gamecenter nickname is null ";
+"Gamecenter未绑定GuestID" = "Gamecenter unbound GuestID";
+"登录atoken为空" = "atoken to be null";
+"登录atoken参数错误" = "atoken parameter error";
+"正在获取授权,请耐心等待" = "Authorization is beging, please wait a moment";

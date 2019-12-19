@@ -18,6 +18,7 @@
 #define ACCOUNT_MODE_GOOGLEPLAY  4
 #define ACCOUNT_MODE_TWITTER  6
 #define ACCOUNT_MODE_INSTAGRAM 8
+#define ACCOUNT_MODE_GAMECENTER 9
 
 #define AACOUNT_NAME @"accountName"
 #define AACOUNT_NICK_NAME @"nickname"
@@ -39,4 +40,13 @@
 #define USERDEFAULT_KEY_GUEST_USER  @"guest_user"
 #define USERDEFAULT_KEY_ACCOUNT_USER  @"account_user"
 
+#define AACOUNT_APPLE_GCPLAYERID @"appleGCPlayerId"
+#define AACOUNT_APPLE_GCPLAYERNAME @"appleGCPlayerName"
+#define AACOUNT_APPLE_BUNDLEID @"appleBundleId"
+#define AACOUNT_APPLE_GC_PUBLICKKEY_URL @"appleGCPublicKeyURL"
+#define AACOUNT_APPLE_GC_SIGNATURE @"appleGCSignature"
+#define AACOUNT_APPLE_GC_SALT @"appleGCSalt"
+#define AACOUNT_GC_TIMESTAMP @"appleGCTimeStamp"
+
+#define ATOKEN @"atoken"
 #endif /* AASEnumDefine_h */

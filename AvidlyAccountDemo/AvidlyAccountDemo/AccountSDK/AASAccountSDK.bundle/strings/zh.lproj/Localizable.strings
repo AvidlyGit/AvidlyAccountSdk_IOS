@@ -58,7 +58,7 @@
 
 "登录成功" = "登录成功";
 "登录失败" = "登录失败";
-"注册成功" = "注册成功";
+"注册并绑定成功" = "注册并绑定成功";
 "注册失败" = "注册失败";
 
 "需要先绑定Account账号后才能修改密码" = "需要先绑定Account账号后才能修改密码";
@@ -166,3 +166,14 @@
 "登录邮箱和认证邮箱一致" = "登录邮箱和认证邮箱一致";
 "邮件已发送至" = "邮件已发送至";
 "请输入您的注册邮箱，系统会发送一封邮件指导您修改密码" = "请输入您的注册邮箱，系统会发送一封邮件指导您修改密码";
+
+"正在登录..." = "正在登录...";
+"Gamecenter已绑定其他账号" = "Gamecenter已绑定其他账号";
+"Gamecenter认证失败" =  "Gamecenter认证失败";
+"Gamecenter playerID为空" = "Gamecenter playerID为空";
+"Gamecenter参数为空" = "Gamecenter参数为空";
+"Gamecenter昵称为空" = "Gamecenter昵称为空";
+"Gamecenter未绑定GuestID" = "Gamecenter未绑定GuestID";
+"登录atoken为空" = "登录atoken为空";
+"登录atoken参数错误" = "登录atoken参数错误";
+"正在获取授权,请耐心等待" = "正在获取授权,请耐心等待";

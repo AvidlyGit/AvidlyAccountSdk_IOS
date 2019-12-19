@@ -13,10 +13,10 @@
 		BD2669D5222D16CD00620557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2669D4222D16CD00620557 /* Assets.xcassets */; };
 		BD2669D8222D16CD00620557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2669D6222D16CD00620557 /* LaunchScreen.storyboard */; };
 		BD2669DB222D16CD00620557 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2669DA222D16CD00620557 /* main.m */; };
-		BD2669F6222D176A00620557 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F0222D176A00620557 /* FBSDKLoginKit.framework */; };
-		BD2669F7222D176A00620557 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F1222D176A00620557 /* FBSDKCoreKit.framework */; };
-		BD2669F8222D176A00620557 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669F2222D176A00620557 /* Bolts.framework */; };
 		BD2669FD222D179900620557 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2669FC222D179900620557 /* AdSupport.framework */; };
+		BD4DF3EB23AB172F00410B7E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4DF3E923AB172F00410B7E /* FBSDKLoginKit.framework */; };
+		BD4DF3EC23AB172F00410B7E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4DF3EA23AB172F00410B7E /* FBSDKCoreKit.framework */; };
+		BD4DF3EE23AB175600410B7E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4DF3ED23AB175600410B7E /* GameKit.framework */; };
 		BDD455332321055000235272 /* AASAccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD455322321055000235272 /* AASAccount.framework */; };
 		BDF8860623506B8900A75A91 /* AASAccountSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BDF8860523506B8900A75A91 /* AASAccountSDK.bundle */; };
 /* End PBXBuildFile section */
@@ -43,14 +43,14 @@
 		BD2669D9222D16CD00620557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD2669DA222D16CD00620557 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD2669E0222D16CE00620557 /* AvidlyAccountDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvidlyAccountDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD2669F0222D176A00620557 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		BD2669F1222D176A00620557 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		BD2669F2222D176A00620557 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		BD2669FC222D179900620557 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BD266A5622326E8200620557 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		BD266A5722326E8300620557 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BD266A5822326EDE00620557 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		BD266A5922326EDE00620557 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BD4DF3E923AB172F00410B7E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		BD4DF3EA23AB172F00410B7E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		BD4DF3ED23AB175600410B7E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BDD455322321055000235272 /* AASAccount.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AASAccount.framework; sourceTree = "<group>"; };
 		BDF8860523506B8900A75A91 /* AASAccountSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AASAccountSDK.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,10 +61,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2669FD222D179900620557 /* AdSupport.framework in Frameworks */,
+				BD4DF3EC23AB172F00410B7E /* FBSDKCoreKit.framework in Frameworks */,
 				BDD455332321055000235272 /* AASAccount.framework in Frameworks */,
-				BD2669F8222D176A00620557 /* Bolts.framework in Frameworks */,
-				BD2669F6222D176A00620557 /* FBSDKLoginKit.framework in Frameworks */,
-				BD2669F7222D176A00620557 /* FBSDKCoreKit.framework in Frameworks */,
+				BD4DF3EB23AB172F00410B7E /* FBSDKLoginKit.framework in Frameworks */,
+				BD4DF3EE23AB175600410B7E /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +81,8 @@
 		BD2669BF222D16CB00620557 = {
 			isa = PBXGroup;
 			children = (
+				BD4DF3E823AB172F00410B7E /* Facebook-5.6.0 */,
 				BD2669F3222D176A00620557 /* AccountSDK */,
-				BD2669EF222D176A00620557 /* FacebookSDK */,
 				BD2669CA222D16CB00620557 /* AvidlyAccountDemo */,
 				BD2669C9222D16CB00620557 /* Products */,
 				BD2669FB222D179900620557 /* Frameworks */,
@@ -114,17 +114,6 @@
 			path = AvidlyAccountDemo;
 			sourceTree = "<group>";
 		};
-		BD2669EF222D176A00620557 /* FacebookSDK */ = {
-			isa = PBXGroup;
-			children = (
-				BD2669F0222D176A00620557 /* FBSDKLoginKit.framework */,
-				BD2669F1222D176A00620557 /* FBSDKCoreKit.framework */,
-				BD2669F2222D176A00620557 /* Bolts.framework */,
-			);
-			name = FacebookSDK;
-			path = AvidlyAccountDemo/FacebookSDK;
-			sourceTree = "<group>";
-		};
 		BD2669F3222D176A00620557 /* AccountSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,9 +127,20 @@
 		BD2669FB222D179900620557 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD4DF3ED23AB175600410B7E /* GameKit.framework */,
 				BD2669FC222D179900620557 /* AdSupport.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD4DF3E823AB172F00410B7E /* Facebook-5.6.0 */ = {
+			isa = PBXGroup;
+			children = (
+				BD4DF3E923AB172F00410B7E /* FBSDKLoginKit.framework */,
+				BD4DF3EA23AB172F00410B7E /* FBSDKCoreKit.framework */,
+			);
+			name = "Facebook-5.6.0";
+			path = "AvidlyAccountDemo/Facebook-5.6.0";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +192,11 @@
 				TargetAttributes = {
 					BD2669C7222D16CB00620557 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BD2669DF222D16CE00620557 = {
 						CreatedOnToolsVersion = 10.1;
@@ -345,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -411,7 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8Q98XXS96P;
 				ENABLE_BITCODE = NO;
@@ -419,6 +424,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AvidlyAccountDemo/FacebookSDK",
 					"$(PROJECT_DIR)/AvidlyAccountDemo/AccountSDK",
+					"$(PROJECT_DIR)/AvidlyAccountDemo/Facebook-5.6.0",
 				);
 				INFOPLIST_FILE = AvidlyAccountDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -431,9 +437,9 @@
 					"$(PROJECT_DIR)/AvidlyAccountDemo/AccountSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.upltv.upsdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.upltv.upsdk.rd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = com.upltv.upsdk_AdHoc_Distribution_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = com.upltv.upsdk_rd_Development_Profile;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -442,7 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8Q98XXS96P;
 				ENABLE_BITCODE = NO;
@@ -450,6 +456,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AvidlyAccountDemo/FacebookSDK",
 					"$(PROJECT_DIR)/AvidlyAccountDemo/AccountSDK",
+					"$(PROJECT_DIR)/AvidlyAccountDemo/Facebook-5.6.0",
 				);
 				INFOPLIST_FILE = AvidlyAccountDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -462,9 +469,9 @@
 					"$(PROJECT_DIR)/AvidlyAccountDemo/AccountSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.upltv.upsdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.upltv.upsdk.rd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = com.upltv.upsdk_AdHoc_Distribution_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = com.upltv.upsdk_rd_Development_Profile;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
