@@ -177,3 +177,6 @@
 "登录atoken为空" = "atoken to be null";
 "登录atoken参数错误" = "atoken parameter error";
 "正在获取授权,请耐心等待" = "Authorization is beging, please wait a moment";
+"gamecenter登录失败" = "gamecenter Login error";
+
+"若未绑定过认证邮箱，找回密码邮件默认发送至您的用户名邮箱" = "The retrieve password message will be sent to your username mailbox if you have no verified email";
